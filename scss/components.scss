@@ -1,0 +1,99 @@
+/* Project Card Hover Effects */
+.project-card {
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+}
+
+.skill-card {
+  background: white;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  h5 {
+    color: var(--mine-shaft);
+    font-weight: 600;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  }
+}
+
+.nav-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background: black;
+    transition: 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.btn-dark {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(0,0,0,0.1);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: black;
+  border-radius: 50%;
+}
+
+.timeline-content h5 {
+  font-weight: 600;
+  color: var(--mine-shaft);
+}

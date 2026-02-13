@@ -1,0 +1,16 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300;400;600;700&display=swap');
+
+// Import partials
+@import 'variables';
+@import 'layout';
+@import 'components';
+
+// CSS Variables for inline styles compatibility
+:root {
+  --white: #{$white};
+  --light-gray: #{$light-gray};
+  --silver-chalice: #{$silver-chalice};
+  --mine-shaft: #{$mine-shaft};
+  --black: #{$black};
+}

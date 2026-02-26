@@ -5,26 +5,95 @@
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "K2D", sans-serif;
   background-color: #F0F0F0;
   color: #3D3D3D;
 }
 
-.project-card {
-  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease;
-  cursor: pointer;
+.container {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.reveal-left, .reveal-right, .reveal-zoom, .reveal {
+  opacity: 0;
+  transition: all 1.6s cubic-bezier(0.3, 1, 0.3, 1);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-zoom {
+  transform: scale(0.95);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+.project-apple {
+  position: relative;
   overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.6s cubic-bezier(0.2, 1, 0.2, 1);
+  text-decoration: none;
 }
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+.project-apple:hover {
+  transform: scale(1.02);
 }
-.project-card:hover img {
+.project-apple:hover img {
   transform: scale(1.05);
 }
-.project-card img {
-  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+.project-apple:hover .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-apple img {
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: center;
+}
+.project-apple .project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.2, 1, 0.2, 1);
+}
+.project-apple .project-overlay h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: white;
+}
+.project-apple .project-overlay p {
+  margin: 0.2rem 0 0;
+  opacity: 0.9;
+  font-weight: 300;
+  color: white;
 }
 
 .skill-card {

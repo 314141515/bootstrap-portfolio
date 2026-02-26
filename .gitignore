@@ -1,0 +1,4 @@
+node_modules/
+bootstrap-portfolio-main/node_modules/
+.DS_Store
+*.map

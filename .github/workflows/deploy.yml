@@ -23,11 +23,12 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        # Vi fortæller robotten at package.json ligger i roden
         run: npm install
 
+      - name: Repair permissions
+        run: chmod +x ./node_modules/.bin/sass
+
       - name: Build Sass
-        # Her kører vi det build-script vi lavede i din package.json
         run: npm run build
 
       - name: Upload artifact

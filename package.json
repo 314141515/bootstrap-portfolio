@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass scss/style.scss css/style.css --watch",
-    "build": "sass scss/style.scss css/style.css"
-  },
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "sass": "sass scss/style.scss css/style.css --watch",
+  "build": "./node_modules/.bin/sass scss/style.scss css/style.css"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -6,8 +6,8 @@
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "sass": "sass scss/style.scss css/style.css --watch",
-  "build": "npx sass bootstrap-portfolio-main/scss/style.scss bootstrap-portfolio-main/css/style.css"
-}, 
+  "build": "sass scss/style.scss css/style.css"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,3 +16,4 @@
     "sass": "^1.97.3"
   }
 }
+

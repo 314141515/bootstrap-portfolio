@@ -33,8 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Her uploader vi hele mappen med dine HTML og CSS filer
-          path: './bootstrap-portfolio-main/'
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment

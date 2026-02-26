@@ -6,7 +6,7 @@
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "sass": "sass scss/style.scss css/style.css --watch",
-  "build": "sass bootstrap-portfolio-main/scss/style.scss bootstrap-portfolio-main/css/style.css"
+  "build": "npx sass bootstrap-portfolio-main/scss/style.scss bootstrap-portfolio-main/css/style.css"
 }, 
   "keywords": [],
   "author": "",
